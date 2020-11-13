@@ -39,6 +39,14 @@ override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         adapter = dogsListAdapter;
     }
 
+    refreshLayout.setOnRefreshListener {
+        dogsList.visibility = View.GONE
+        listError.visibility = View.GONE
+        loadingView.visibility =  View.VISIBLE
+        viewModel.refreshBypassCache()
+        refreshLayout.isRefreshing = false
+    }
+
     observeViewModel()
 }
 

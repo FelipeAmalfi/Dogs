@@ -25,8 +25,8 @@
             app:enterAnim="@anim/nav_default_enter_anim"
             app:exitAnim="@anim/nav_default_exit_anim" />
         <argument
-            android:name="dog"
-            app:argType="com.example.course2.model.DogBreed"
+            android:name="dogUuid"
+            app:argType="integer"
             />
     </fragment>
 </navigation>

@@ -3,6 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+        <variable
+            name="dog"
+            type="com.example.course2.model.DogBreed" />
+    </data>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -13,7 +19,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/dogImage"
             android:layout_alignParentTop="true"
-            android:src="@mipmap/ic_dog_icon"
+            android:imageUrl="@{dog.imageUrl}"
             android:scaleType="fitCenter"
             android:minHeight="200dp"/>
 
@@ -22,7 +28,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/dogName"
             android:layout_below="@+id/dogImage"
-            android:text="Dog name"
+            android:text="@{dog.dogBreed}"
             android:layout_centerHorizontal="true"
             android:layout_margin="4dp"
 
@@ -33,7 +39,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/dogPurpose"
             android:layout_below="@+id/dogName"
-            android:text="Dog purpose"
+            android:text="@{dog.breedFor}"
             android:layout_centerHorizontal="true"
             android:layout_margin="4dp" />
 
@@ -42,7 +48,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/dogTemperament"
             android:layout_below="@+id/dogPurpose"
-            android:text="Dog Temperament"
+            android:text="@{dog.temperament}"
             android:layout_centerHorizontal="true"
             android:layout_margin="4dp" />
         <TextView
@@ -50,7 +56,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/dogLifespan"
             android:layout_below="@+id/dogTemperament"
-            android:text="Dog Lifespan"
+            android:text="@{dog.lifeSpan}"
             android:layout_centerHorizontal="true"
             android:layout_margin="4dp" />
 
